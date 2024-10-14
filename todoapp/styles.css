@@ -1,0 +1,99 @@
+.alert{
+    width:  100;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    border: 2px solid rgb(255, 4, 4);
+    background-color: rgb(207, 146, 146);
+}
+
+.yellow{
+    border: 2px solid rgb(246, 246, 21);
+    background-color: rgba(203, 206, 40, 0.63);
+}
+
+.green {
+    border: 2 px solid rgb(0, 255, 38);
+    background-color: rgb(69, 251, 103);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* styles.css */
+
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo suave para toda la página */
+}
+
+.container {
+    text-align: center;
+}
+
+.cuadro {
+    background-color: #ffffff; /* Color de fondo blanco */
+    padding: 30px; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px; /* Margen alrededor del cuadro */
+    transition: transform 0.3s; /* Transición suave para el efecto de hover */
+}
+
+/* Efecto de hover para el cuadro */
+.cuadro:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+h1 {
+    color: blue;
+    margin: 0; /* Elimina el margen predeterminado del h1 */
+}
+
+/* Estilos del formulario */
+.form {
+    margin-top: 20px; /* Añadir margen superior */
+}
+
+/* Estilos del botón */
+button {
+    background-color: blue; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Cambiar el color al pasar el ratón */
+button:hover {
+    background-color: darkblue;
+}
+
+
+input {
+    padding: 10px;
+    margin: 10px 0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; 
+    max-width: 300px; /* Ancho máximo */
+}
