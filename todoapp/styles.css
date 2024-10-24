@@ -63,7 +63,7 @@ body {
 }
 
 h1 {
-    color: blue;
+    color: rgb(118, 118, 177);
     margin: 0; /* Elimina el margen predeterminado del h1 */
 }
 

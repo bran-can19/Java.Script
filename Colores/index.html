@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezcla de Colores RGB</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .color-box {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="range"] {
+            margin-left: 10px;
+            width: 100%;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background: #ddd;
+            height: 10px;
+            border-radius: 5px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 2px solid #fff;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 2px solid #fff;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        input[type="range"]::-ms-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 2px solid #fff;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .value-display {
+            margin-left: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mezcla de Colores RGB</h1>
+    <div class="color-box" id="colorBox">
+        <label for="red">Rojo: 
+            <input type="range" id="red" min="0" max="255" value="0">
+            <span class="value-display" id="redValue">0</span>
+        </label>
+        <label for="green">Verde: 
+            <input type="range" id="green" min="0" max="255" value="0">
+            <span class="value-display" id="greenValue">0</span>
+        </label>
+        <label for="blue">Azul: 
+            <input type="range" id="blue" min="0" max="255" value="0">
+            <span class="value-display" id="blueValue">0</span>
+        </label>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const redInput = document.getElementById('red');
+            const greenInput = document.getElementById('green');
+            const blueInput = document.getElementById('blue');
+            const colorBox = document.getElementById('colorBox');
+            const redValueDisplay = document.getElementById('redValue');
+            const greenValueDisplay = document.getElementById('greenValue');
+            const blueValueDisplay = document.getElementById('blueValue');
+
+            function updateColor() {
+                const redValue = redInput.value;
+                const greenValue = greenInput.value;
+                const blueValue = blueInput.value;
+
+                const rgbColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+                document.body.style.backgroundColor = rgbColor;
+                colorBox.style.backgroundColor = rgbColor;
+
+
+                redValueDisplay.textContent = redValue;
+                greenValueDisplay.textContent = greenValue;
+                blueValueDisplay.textContent = blueValue;
+            }
+
+            redInput.addEventListener('input', updateColor);
+            greenInput.addEventListener('input', updateColor);
+            blueInput.addEventListener('input', updateColor);
+
+            updateColor();
+        });
+    </script>
+    <button><a href="/menu.html">REGRESO A MENU</a></button>
+</body>
+</html>

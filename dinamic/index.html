@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Propiedades del Div</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ffffff;
+        }
+
+        #miDiv {
+            width: 200px;
+            height: 200px;
+            background-color: hsl(105, 100%, 30%);
+            margin: 20px auto;
+            border: 2px solid black;
+            border-radius: 0px;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+            opacity: 1;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        input[type="range"] {
+            width: 200px;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div id="miDiv"></div>
+        <br><br>
+
+        <label for="Alto">Alto </label>
+        <input type="range" id="Alto" min="50"  oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="Ancho">Ancho </label>
+        <input type="range" id="Ancho" min="50" max="500" value="200" oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="Sombra">Sombra </label>
+        <input type="range" id="Sombra" min="0" max="50" value="0" oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="Radio">Radio</label>
+        <input type="range" id="Radio" min="0" max="100" value="0" oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="Borde">Borde </label>
+        <input type="range" id="Borde" min="0" max="20" value="2" oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="Opacidad">Opacidad </label>
+        <input type="range" id="Opacidad" min="0" max="1" step="0.1" value="1" oninput="actualizarPropiedades()">
+        <br>
+
+        <label for="ColorFondo">Color  </label>
+        <input type="range" id="ColorFondo" min="0" max="360" value="200" oninput="actualizarPropiedades()">
+        <br><br>
+
+    </div>
+    <button><a href="/menu.html">REGRESO A MENU</a></button>
+    <script src="./app.js"></script>
+</body>
+</html>
